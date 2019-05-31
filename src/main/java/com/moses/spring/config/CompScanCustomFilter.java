@@ -26,7 +26,7 @@ public class CompScanCustomFilter implements TypeFilter {
 		
 		String className = metadata.getClassName();
 		System.out.println("----->"+className);
-		if(className.contains("cont")) {
+		if(className.contains("dao")) {
 			return true;
 		}
 		return false;

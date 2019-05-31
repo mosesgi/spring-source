@@ -8,10 +8,11 @@ import org.springframework.context.annotation.Primary;
 import com.moses.spring.dao.OrderDao;
 
 @Configuration
-@ComponentScan({"com.moses.spring.controller", "com.moses.spring.dao", "com.moses.spring.service"})
+@ComponentScan({"com.moses.spring.controller", "com.moses.spring.dao", "com.moses.spring.service",
+	"com.moses.spring.autowired"})
 public class AutowiredConfig {
 	
-	@Primary
+//	@Primary
 	@Bean("orderDao2")
 	public OrderDao orderDao() {
 		OrderDao dao = new OrderDao();
