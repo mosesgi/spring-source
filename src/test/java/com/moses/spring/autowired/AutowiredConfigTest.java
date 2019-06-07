@@ -3,6 +3,7 @@ package com.moses.spring.autowired;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.moses.spring.dao.OrderDao;
 import com.moses.spring.service.OrderService;
@@ -18,6 +19,8 @@ public class AutowiredConfigTest {
 		//直接从容器中获取TestDao, 和使用Autowired注解来取比较
 		OrderDao orderDao = (OrderDao)app.getBean("orderDao");
 		System.out.println(orderDao);
+		
+//		ClassPathXmlApplicationContext
 		
 		app.close();
 	}
