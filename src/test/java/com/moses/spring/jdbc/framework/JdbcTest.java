@@ -22,8 +22,8 @@ public class JdbcTest {
 			// 1、加载驱动类
 			Class.forName("com.mysql.jdbc.Driver");
 			// 2、建立连接
-			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.1.105:3306/gupaoedu_db", "root",
-					"123456");
+			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.50.230:3307/test", "root",
+					"jatqstxu");
 			// 3、创建语句集
 			PreparedStatement pstm = con.prepareStatement("select * from t_member");
 			// 4、执行

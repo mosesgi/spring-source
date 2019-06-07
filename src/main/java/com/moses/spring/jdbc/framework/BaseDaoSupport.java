@@ -156,7 +156,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 */
 	protected List<T> getAll() throws Exception {
 		String sql = "select " + op.allColumn + " from " + getTableName();
-		return this.jdbcTemplateReadOnly().query(sql, this.op.rowMapper, new HashMap<String, Object>());
+		return this.jdbcTemplateReadOnly().query(sql, this.op.rowMapper, new Object[0]);
 	}
 	
 	/**

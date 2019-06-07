@@ -8,12 +8,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 import com.alibaba.fastjson.JSON;
+import com.moses.spring.jdbc.framework.config.JdbcFrameworkConfig;
 import com.moses.spring.jdbc.framework.dao.MemberDao;
 import com.moses.spring.jdbc.framework.entity.Member;
 
-@ContextConfiguration(locations = {"classpath*:application-context.xml"})
+@ContextConfiguration(classes=JdbcFrameworkConfig.class ,loader=AnnotationConfigContextLoader.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class MemberDaoTest {
 	@Autowired MemberDao memberDao;
@@ -53,7 +55,7 @@ public class MemberDaoTest {
 	//对象状态：临时态、持久态、删除态、游离态
 	
 	@Test
-//	@Ignore
+	@Ignore
 	public void testSelectByName(){
 		try {
 			List<Member> r = memberDao.selectByName("tom");
@@ -64,7 +66,7 @@ public class MemberDaoTest {
 	}
 	
 	@Test
-	@Ignore
+//	@Ignore
 	public void testSelectAll(){
 		try {
 			System.out.println("-------" + JSON.toJSONString(memberDao.selectAll()));
