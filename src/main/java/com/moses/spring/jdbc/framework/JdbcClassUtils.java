@@ -14,8 +14,6 @@ import java.util.Set;
 
 /**
  * 
- * @author Tom
- *
  */
 public class JdbcClassUtils {
 

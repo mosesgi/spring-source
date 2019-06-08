@@ -3,7 +3,6 @@ package com.moses.spring.jdbc.framework;
 
 /**
  * sql排序组件
- * @author Tom
  */
 public class Order {
 	private boolean ascending; //升序还是降序

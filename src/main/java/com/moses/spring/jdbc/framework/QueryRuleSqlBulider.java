@@ -16,7 +16,6 @@ import com.moses.spring.jdbc.framework.QueryRule.Rule;
 
 /**
  * 根据QueryRule自动构建sql语句
- * @author Tom
  *
  */
 public class QueryRuleSqlBulider {

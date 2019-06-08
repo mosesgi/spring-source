@@ -21,7 +21,6 @@ import org.springframework.jdbc.core.RowMapper;
 
 /**
  * 实体对象的反射操作
- * @author Tom
  *
  * @param <T>
  */

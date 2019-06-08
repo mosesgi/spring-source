@@ -55,7 +55,6 @@ import com.moses.spring.jdbc.framework.utils.Page;
  *	protected Entity mapRow(ResultSet rs, int rowNum) throws SQLException {return utils.parse(rs);}
  *
  *
- * @author Tom
  */
 public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializable>{
 	private Logger log = Logger.getLogger(BaseDaoSupport.class);
