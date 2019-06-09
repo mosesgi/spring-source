@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import com.alibaba.fastjson.JSON;
 import com.moses.spring.jdbc.framework.entity.Member;
 
 public class JdbcTest {
@@ -54,7 +54,7 @@ public class JdbcTest {
 
 				result.add(obj);
 			}
-			System.out.println(JSON.toJSON(result));
+			System.out.println(Arrays.toString(result.toArray()));
 			rs.close();
 			pstm.close();
 			con.close();

@@ -1,5 +1,6 @@
 package com.moses.spring.jdbc.framework;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Ignore;
@@ -10,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import com.alibaba.fastjson.JSON;
 import com.moses.spring.jdbc.framework.config.JdbcFrameworkConfig;
 import com.moses.spring.jdbc.framework.dao.MemberDao;
 import com.moses.spring.jdbc.framework.entity.Member;
@@ -59,7 +59,7 @@ public class MemberDaoTest {
 	public void testSelectByName(){
 		try {
 			List<Member> r = memberDao.selectByName("tom");
-			System.out.println(JSON.toJSON(r));
+			System.out.println(Arrays.toString(r.toArray()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -69,7 +69,7 @@ public class MemberDaoTest {
 //	@Ignore
 	public void testSelectAll(){
 		try {
-			System.out.println("-------" + JSON.toJSONString(memberDao.selectAll()));
+			System.out.println("-------" + Arrays.toString(memberDao.selectAll().toArray()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

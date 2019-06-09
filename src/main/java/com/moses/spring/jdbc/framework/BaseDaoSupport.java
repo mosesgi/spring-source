@@ -38,8 +38,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import com.alibaba.fastjson.util.FieldInfo;
-import com.alibaba.fastjson.util.TypeUtils;
 import com.moses.spring.jdbc.framework.utils.DataUtils;
 import com.moses.spring.jdbc.framework.utils.GenericsUtils;
 import com.moses.spring.jdbc.framework.utils.Page;
@@ -1550,22 +1548,22 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	protected abstract void setDataSource(DataSource dataSource);
 	
-	private Map<String,Object> convertMap(Object obj){
-		Map<String,Object> map = new HashMap<String,Object>();
-		
-		 List<FieldInfo> getters = TypeUtils.computeGetters(obj.getClass(), null);
-		 for(int i=0,len=getters.size();i<len;i++){
-			 FieldInfo fieldInfo = getters.get(i);
-			 String name = fieldInfo.getName();
-			try {
-				Object value = fieldInfo.get(obj);
-				map.put(name,value);
-			} catch (Exception e) {
-				log.error(String.format("convertMap error object:%s  field: %s",obj.toString(),name));
-			} 
-		 }
-		
-		return map;
-	}
+//	private Map<String,Object> convertMap(Object obj){
+//		Map<String,Object> map = new HashMap<String,Object>();
+//		
+//		 List<FieldInfo> getters = TypeUtils.computeGetters(obj.getClass(), null);
+//		 for(int i=0,len=getters.size();i<len;i++){
+//			 FieldInfo fieldInfo = getters.get(i);
+//			 String name = fieldInfo.getName();
+//			try {
+//				Object value = fieldInfo.get(obj);
+//				map.put(name,value);
+//			} catch (Exception e) {
+//				log.error(String.format("convertMap error object:%s  field: %s",obj.toString(),name));
+//			} 
+//		 }
+//		
+//		return map;
+//	}
 	
 }
