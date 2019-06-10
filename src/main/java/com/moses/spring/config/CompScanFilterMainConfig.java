@@ -14,7 +14,7 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(value = "com.moses.spring", includeFilters= {
 //		@Filter(type=FilterType.ANNOTATION,classes = Controller.class ),
 		@Filter(type=FilterType.CUSTOM, classes = CompScanCustomFilter.class)
-}, useDefaultFilters = false)
+},useDefaultFilters = false)
 public class CompScanFilterMainConfig {
 	@Bean
 	public Person person() {

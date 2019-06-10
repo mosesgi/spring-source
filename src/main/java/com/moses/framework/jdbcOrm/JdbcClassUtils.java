@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

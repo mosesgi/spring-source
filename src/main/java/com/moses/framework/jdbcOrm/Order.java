@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 
 /**

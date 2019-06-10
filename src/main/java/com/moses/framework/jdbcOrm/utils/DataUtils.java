@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework.utils;
+package com.moses.framework.jdbcOrm.utils;
 
 import java.lang.reflect.Method;
 import java.math.BigDecimal;

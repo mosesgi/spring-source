@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,9 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import com.moses.spring.jdbc.framework.config.JdbcFrameworkConfig;
-import com.moses.spring.jdbc.framework.dao.MemberDao;
-import com.moses.spring.jdbc.framework.entity.Member;
+import com.moses.framework.jdbcOrm.config.JdbcFrameworkConfig;
+import com.moses.framework.jdbcOrm.dao.MemberDao;
+import com.moses.framework.jdbcOrm.entity.Member;
 
 @ContextConfiguration(classes=JdbcFrameworkConfig.class ,loader=AnnotationConfigContextLoader.class)
 @RunWith(SpringJUnit4ClassRunner.class)

@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 
-import com.moses.spring.jdbc.framework.QueryRule.Rule;
+import com.moses.framework.jdbcOrm.QueryRule.Rule;
 
 
 

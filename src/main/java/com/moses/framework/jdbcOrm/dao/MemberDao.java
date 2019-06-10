@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework.dao;
+package com.moses.framework.jdbcOrm.dao;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import javax.sql.DataSource;
 
 import org.springframework.stereotype.Repository;
 
-import com.moses.spring.jdbc.framework.BaseDaoSupport;
-import com.moses.spring.jdbc.framework.QueryRule;
-import com.moses.spring.jdbc.framework.entity.Member;
+import com.moses.framework.jdbcOrm.BaseDaoSupport;
+import com.moses.framework.jdbcOrm.QueryRule;
+import com.moses.framework.jdbcOrm.entity.Member;
 
 @Repository
 public class MemberDao extends BaseDaoSupport<Member, Long> {

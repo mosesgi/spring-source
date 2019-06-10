@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework.config;
+package com.moses.framework.jdbcOrm.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

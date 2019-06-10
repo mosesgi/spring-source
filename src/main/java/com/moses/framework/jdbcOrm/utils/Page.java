@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework.utils;
+package com.moses.framework.jdbcOrm.utils;
 
 import java.io.Serializable;
 import java.util.ArrayList;

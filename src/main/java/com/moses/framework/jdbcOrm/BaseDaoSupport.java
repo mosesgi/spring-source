@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -38,9 +38,9 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import com.moses.spring.jdbc.framework.utils.DataUtils;
-import com.moses.spring.jdbc.framework.utils.GenericsUtils;
-import com.moses.spring.jdbc.framework.utils.Page;
+import com.moses.framework.jdbcOrm.utils.DataUtils;
+import com.moses.framework.jdbcOrm.utils.GenericsUtils;
+import com.moses.framework.jdbcOrm.utils.Page;
 
 /**
  * BaseDao 扩展类,主要功能是支持自动拼装sql语句，必须继承方可使用

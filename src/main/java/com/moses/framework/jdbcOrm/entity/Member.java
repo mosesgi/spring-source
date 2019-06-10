@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework.entity;
+package com.moses.framework.jdbcOrm.entity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.moses.spring.jdbc.framework;
+package com.moses.framework.jdbcOrm;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.moses.spring.jdbc.framework.entity.Member;
+import com.moses.framework.jdbcOrm.entity.Member;
 
 public class JdbcTest {
 
