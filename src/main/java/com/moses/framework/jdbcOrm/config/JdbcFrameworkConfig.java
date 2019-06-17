@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan(basePackages = "com.moses.spring.jdbc.framework")
+@ComponentScan(basePackages = "com.moses.framework.jdbcOrm")
 @Import(JdbcConfig.class)
 public class JdbcFrameworkConfig {
 
