@@ -31,8 +31,8 @@ public class BeanUtils extends org.apache.commons.beanutils.BeanUtils {
 	 * @return the first generic declaration, or <code>Object.class</code> if
 	 *         cannot be determined
 	 */
-	public static Class getSuperClassGenricType(Class clazz) {
-		return getSuperClassGenricType(clazz, 0);
+	public static Class getSuperClassGenericType(Class clazz) {
+		return getSuperClassGenericType(clazz, 0);
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class BeanUtils extends org.apache.commons.beanutils.BeanUtils {
 	 * @return the index generic declaration, or <code>Object.class</code> if
 	 *         cannot be determined
 	 */
-	public static Class getSuperClassGenricType(Class clazz, int index) {
+	public static Class getSuperClassGenericType(Class clazz, int index) {
 
 		Type genType = clazz.getGenericSuperclass();
 

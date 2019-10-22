@@ -225,7 +225,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * </code>
 	 * </pre>
 	 * 
-	 * @param obj 待更新对对象
+	 * @param entity 待更新对对象
 	 * @throws IllegalAccessException 
 	 * @throws IllegalArgumentException 
 	 */
@@ -270,7 +270,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * </pre>
 	 * 
 	 * @param sql 更新sql语句
-	 * @param args 参数对象
+	 * @param paramMap 参数对象
 	 * 
 	 * @return 更新记录数
 	 */
@@ -370,7 +370,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * </code>
 	 * </pre>
 	 * 
-	 * @param obj 待删除的实体对象
+	 * @param entity 待删除的实体对象
 	 */
 	protected int delete(Object entity) throws Exception {
 		return this.doDelete(op.pkField.get(entity));
@@ -385,7 +385,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * </code>
 	 * </pre>
 	 * 
-	 * @param entityList 待删除的实体对象列表
+	 * @param list 待删除的实体对象列表
 	 * @throws InvocationTargetException 
 	 * @throws IllegalArgumentException 
 	 * @throws IllegalAccessException 
@@ -490,8 +490,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * </code>
 	 * </pre>
 	 * 
-	 * @param sql SQL语句
-	 * @param values 参数List
+	 * @param queryRule QueryRule
 	 * @return 满足条件的记录数
 	 */
 	protected long getCount(QueryRule queryRule) throws Exception {
@@ -553,22 +552,22 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	/**
 	 * 根据SQL语句执行查询，参数为Map
-	 * @param sql语句
-	 * @param pamam 为Map，key为属性名，value为属性值
+	 * @param sql sql语句
+	 * @param param 为Map，key为属性名，value为属性值
 	 * @return 符合条件的所有对象
 	 */
-	protected List<Map<String,Object>> findBySql(String sql,Map<String,?> pamam) throws Exception{
-		return this.jdbcTemplateReadOnly().queryForList(sql,pamam);
+	protected List<Map<String,Object>> findBySql(String sql,Map<String,?> param) throws Exception{
+		return this.jdbcTemplateReadOnly().queryForList(sql,param);
 	}
 	
 	/**
 	 * 根据SQL语句查询符合条件的唯一对象，没符合条件的记录返回null.<br>
-	 * @param sql语句
-	 * @param pamam 为Map，key为属性名，value为属性值
+	 * @param sql sql语句
+	 * @param param 为Map，key为属性名，value为属性值
 	 * @return 符合条件的唯一对象，没符合条件的记录返回null.
 	 */
-	protected Map<String,Object> findUniqueBySql(String sql,Map<String,?> pamam) throws Exception{
-		List<Map<String,Object>> list = findBySql(sql,pamam);
+	protected Map<String,Object> findUniqueBySql(String sql,Map<String,?> param) throws Exception{
+		List<Map<String,Object>> list = findBySql(sql,param);
 		if (list.size() == 0) {
 			return null;
 		} else if (list.size() == 1) {
@@ -580,7 +579,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	/**
 	 * 根据SQL语句执行查询，参数为Object数组对象
-	 * @param sql查询语句
+	 * @param sql 查询语句
 	 * @param args 为Object数组
 	 * @return 符合条件的所有对象
 	 */
@@ -590,7 +589,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 
 	/**
 	 * 根据SQL语句查询符合条件的唯一对象，没符合条件的记录返回null.<br>
-	 * @param sql查询语句
+	 * @param sql 查询语句
 	 * @param args 为Object数组
 	 * @return 符合条件的唯一对象，没符合条件的记录返回null.
 	 */
@@ -607,7 +606,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	/**
 	 * 根据SQL语句执行查询，参数为List对象
-	 * @param sql查询语句
+	 * @param sql 查询语句
 	 * @param list<Object>对象
 	 * @return 符合条件的所有对象
 	 */
@@ -617,7 +616,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	/**
 	 * 根据SQL语句查询符合条件的唯一对象，没符合条件的记录返回null.<br>
-	 * @param sql查询语句
+	 * @param sql 查询语句
 	 * @param listParam 属性值List
 	 * @return 符合条件的唯一对象，没符合条件的记录返回null.
 	 */
@@ -771,7 +770,6 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	
 	/**
 	 * 根据当前list进行相应的分页返回
-	 * @param <T>
 	 * @param objList
 	 * @param pageNo
 	 * @param pageSize

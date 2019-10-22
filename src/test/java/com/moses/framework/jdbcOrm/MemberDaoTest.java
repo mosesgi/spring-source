@@ -81,7 +81,7 @@ public class MemberDaoTest {
 		try {
 			Member data = new Member();
 			data.setName("小星星");
-			boolean r = memberDao.insterOne(data);
+			boolean r = memberDao.insertOne(data);
 			if(r){
 				System.out.println(data.getId());
 			}else{
@@ -99,7 +99,7 @@ public class MemberDaoTest {
 			Member data = new Member();
 			data.setId(6L);
 			data.setName("于菲");
-			boolean r = memberDao.updataOne(data);
+			boolean r = memberDao.updateOne(data);
 			System.out.println(r);
 		} catch (Exception e) {
 			e.printStackTrace();

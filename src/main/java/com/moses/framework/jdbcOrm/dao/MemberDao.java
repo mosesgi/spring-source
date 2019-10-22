@@ -35,13 +35,13 @@ public class MemberDao extends BaseDaoSupport<Member, Long> {
 		return super.getAll();
 	}
 
-	public boolean insterOne(Member m) throws Exception {
+	public boolean insertOne(Member m) throws Exception {
 		Long id = super.insertAndReturnId(m);
 		m.setId(id);
 		return id > 0;
 	}
 
-	public boolean updataOne(Member m) throws Exception {
+	public boolean updateOne(Member m) throws Exception {
 		long count = super.update(m);
 		return count > 0;
 	}
